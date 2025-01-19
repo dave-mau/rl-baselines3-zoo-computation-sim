@@ -53,6 +53,8 @@ try:
 except ImportError:
     pass
 
+import computation_sim_gym.hierarchical
+
 
 # Register no vel envs
 def create_no_vel_env(env_id: str) -> Callable[[Optional[str]], gym.Env]:
