@@ -580,3 +580,15 @@ Walker2d-v4:
   gae_lambda: 0.95
   max_grad_norm: 1
   vf_coef: 0.871923
+
+ParsedHierarchicalSystem-v0:
+  normalize: true
+  policy: 'MlpPolicy'
+  n_envs: 8
+  monitor_kwargs: "dict(allow_early_resets=True, info_keywords=('buffer_overrides', 'missing_inputs', 'missing_measurements', 'output_age_avg', 'output_age_max', 'output_age_min'))"
+  env_wrapper:
+    - gymnasium.wrappers.TimeLimit:
+        max_episode_steps: 1000
+  n_timesteps: !!float 1e6
+
+
